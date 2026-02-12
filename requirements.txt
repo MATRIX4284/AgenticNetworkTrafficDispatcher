@@ -1,0 +1,7 @@
+pandas
+langchain
+langgraph
+langchain-community
+langchain-openai
+chromadb
+sentence-transformers

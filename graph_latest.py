@@ -6,8 +6,6 @@ from langgraph.graph import StateGraph, END
 from langchain_openai import ChatOpenAI
 from topic_classification import classify_complaint
 from complaint_summarizer import SUMMARY_PROMPT
-
-# ---- Graph State ----
 from typing import TypedDict, List, Dict, Optional
 
 class State(TypedDict):
@@ -52,7 +50,6 @@ def process(state: State):
 
     rows = (
         df[required_columns]
-        .head(50)
         .apply(
             lambda row: {
                 "ticket": str(row["Ticket #"]),
